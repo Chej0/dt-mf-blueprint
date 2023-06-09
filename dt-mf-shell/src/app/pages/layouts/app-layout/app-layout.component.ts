@@ -13,9 +13,16 @@ export class AppLayoutComponent implements OnInit {
   public smallScreen: boolean = window.innerWidth < 600 ? true : false;
   public menu: MenuItem[] = [
     {
-      state: '/',
+      state: 'angular',
       icon: 'home',
       name: 'Angular',
+      iconType: 'icon',
+      order: 1
+    },
+    {
+      state: 'rc',
+      icon: 'psychology',
+      name: 'React',
       iconType: 'icon',
       order: 1
     },

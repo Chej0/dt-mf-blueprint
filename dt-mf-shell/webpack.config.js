@@ -6,9 +6,7 @@ const moduleFederationConfig = withModuleFederationPlugin({
   //   "mfe1": "http://localhost:3000/remoteEntry.js",    
   // },
 
-  remotes: {
-    mfAngular: "http://localhost:4201/remoteEntry.js",
-  },
+
   shared: {
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
   },

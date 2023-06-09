@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '', component: AppLayoutComponent,
     children: [
       {
-        path: '',
+        path: 'angular',
         loadChildren: () => loadRemoteModule({ type: 'module', remoteEntry: 'http://localhost:4201/remoteEntry.js', exposedModule: './AngularModule' }).then((m) => m.AngularModule)
       },
       {
@@ -21,6 +21,16 @@ const routes: Routes = [
           elementName: 'react-element'
         } as WebComponentWrapperOptions
       },
+      {
+        path: 'vue',
+        component: WebComponentWrapper,
+        data: {
+          remoteEntry: 'http://localhost:4203/remoteEntry.js',
+          remoteName: 'vue',
+          exposedModule: './web-components',
+          elementName: 'vue-element'
+        } as WebComponentWrapperOptions
+      }, 
     ]
   }
 ];

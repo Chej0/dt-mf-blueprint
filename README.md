@@ -49,3 +49,25 @@ In this repo you will see te pretty basic structure of the new platform using Mo
 ```console
     ng serve -o
 ```
+5. Agregar al archivo de rutas del shell el siguiente código:
+```console
+    {
+        path: 'angular',
+        loadChildren: () => loadRemoteModule({ type: 'module', remoteEntry: 'http://localhost:4201/remoteEntry.js', exposedModule: './AngularModule' }).then((m) => m.AngularModule)
+    },
+```
+6. En el proyecto dt-angular en el archivo webpack.config.js agregar el módulo a exponer
+```console
+    exposes: {
+        './AngularModule': './src/app/angular/angular.module.ts',
+    },
+```
+
+
+
+
+## Crear nuevo módulo en REACT
+1. En la misma carpeta raiz ejecuta el siquiente comando: 
+```console
+    ng new dt-angular --style=scss --routing=true
+```
