@@ -20,13 +20,6 @@ export class AppLayoutComponent implements OnInit {
       order: 1
     },
     {
-      state: 'rc',
-      icon: 'psychology',
-      name: 'React',
-      iconType: 'icon',
-      order: 1
-    },
-    {
       state: 'react',
       icon: 'psychology',
       name: 'React',

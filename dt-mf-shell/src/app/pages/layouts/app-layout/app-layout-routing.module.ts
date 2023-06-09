@@ -25,7 +25,7 @@ const routes: Routes = [
         path: 'vue',
         component: WebComponentWrapper,
         data: {
-          remoteEntry: 'http://localhost:4203/remoteEntry.js',
+          remoteEntry: 'http://localhost:4205/remoteEntry.js',
           remoteName: 'vue',
           exposedModule: './web-components',
           elementName: 'vue-element'

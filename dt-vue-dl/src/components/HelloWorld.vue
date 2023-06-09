@@ -1,12 +1,9 @@
 <template>
   <div class="hello">
     <h1>
-      {{ msg }}
       <img alt="Vue logo" src="https://cli.vuejs.org/favicon.png" height="30">
+      VUE MODULE
     </h1>
-    <p>
-      Vue Version: {{ version }}
-    </p>
   </div>
 </template>
 
