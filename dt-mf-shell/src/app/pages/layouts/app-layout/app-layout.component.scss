@@ -1,0 +1,41 @@
+.sidebar-container {
+    position: relative;
+    height: calc(100% - 64px);
+    background-color: #F5F7FB;
+
+    .content {
+        margin-left: 67px;
+        transition: 0.15s;
+        height: calc(100% - 12px);
+        padding: 0px 12px 12px 12px;
+        // Si la clase 'open' está presente en el componente app-main-sidebar, aplicar un margen de 256px
+        &.sidebar-open {
+          margin-left: 256px;
+        }
+    }
+
+    .content-section {
+        height: 100%;
+        overflow: auto;
+    }
+
+}
+
+
+
+@media (width < 600px) {
+    .sidebar-container {
+        height: calc(100% - 56px);
+    
+        .content {
+            margin-left: 0px;
+            &.sidebar-open {
+              margin-left: 0px;
+            }
+        }
+    
+    }
+
+    
+
+}

@@ -1,0 +1,10 @@
+<div class="sidebar" [ngClass]="{'open': opened}">
+    <div class="menu-section">
+      <mat-nav-list>
+        <mat-list-item *ngFor="let m of menu" (click)="routerlink.emit(m.state)" [ngClass]="{'active': this.currentRoute.includes( m.state)}">
+          <mat-icon matListItemIcon class="material-icons-outlined">{{m.icon}}</mat-icon>
+          <div matListItemTitle >{{m.name}}</div>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+</div>

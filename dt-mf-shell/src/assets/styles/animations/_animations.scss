@@ -1,0 +1,12 @@
+.slide-in-right {
+    animation: slideInRight 0.2s ease;
+}
+
+@keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+}

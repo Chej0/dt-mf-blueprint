@@ -1,0 +1,12 @@
+<app-navbar [smallScreen]="smallScreen" (toggle)="toggle()"></app-navbar>
+<div class="sidebar-container">
+    <app-sidebar [opened]="opened" [menu]="menu" [currentRoute]="currentRoute" (routerlink)="goToLink($event)"></app-sidebar>
+    <div class="content" [ngClass]="{'sidebar-open': opened}" >
+        <div class="content-section">
+
+           
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+

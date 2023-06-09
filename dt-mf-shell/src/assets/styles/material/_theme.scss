@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+// pallets for primary and secondary colors
+$gl-green-primary: (
+    50 : #dff6eb,
+    100 : #b0e9ce,
+    200 : #76daaf,
+    300 : #00cc8f,
+    400 : #00c076,
+    500 : #00b360,
+    600 : #00a455,
+    700 : #009248,
+    800 : #00803c,
+    900 : #006026,
+    A100 : #c6f0c5,
+    A200 :  #a0e79f,
+    A400 : #4bd552,
+    A700 : #00a90a,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$gl-secondary: (
+  50 : #e6eef6,
+  100 : #c1d5e8,
+  200 : #98bad9,
+  300 : #6e9eca,
+  400 : #4f89be,
+  500 : #3074b3,
+  600 : #2b6cac,
+  700 : #2461a3,
+  800 : #1e579a,
+  900 : #13448b,
+  A100 : #bed6ff,
+  A200 : #8bb6ff,
+  A400 : #5896ff,
+  A700 : #3f86ff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #ffffff,
+  )
+);
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$gl-primary: mat.define-palette($gl-green-primary, 300);
+$gl-accent: mat.define-palette($gl-secondary);
+
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$gl-theme: mat.define-light-theme((
+  color: (
+    primary: $gl-primary,
+    accent: $gl-accent,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($gl-theme);
+
+
+/* Deep-purple Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #00cc8f;
+  --primary-rgb: 0,204,143;
+  --primary-hover: #00c076;
+  --primary-focus: rgba(0, 205, 140, 0.125);
+  --primary-inverse: #FFF;
+  --background-color: #F5F7FB;
+  --background-color-rgb: 245,247,251;
+
+  --accent: #2b6cac;
+  --accent-rgb: 43,108,172;
+}
+
+/* Deep-purple Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary: #00cc8f;
+    --primary-rgb: 0,204,143;
+    --primary-hover: #00c076;
+    --primary-focus: rgba(0, 205, 140, 0.25);
+    --primary-inverse: #FFF;
+    --background-color: #F5F7FB;
+    --background-color-rgb: 245,247,251;
+
+    --accent: #2b6cac;
+    --accent-rgb: 43,108,172;
+  }
+}
+
+/* Deep-purple Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #;
+  --primary-hover: #00c076;
+  --primary-rgb: 0,204,143;
+  --primary-focus: rgba(94, 53, 177, 0.25);
+  --primary-inverse: #FFF;
+  --background-color: #F5F7FB;
+  --background-color-rgb: 245,247,251;
+
+  --accent: #2b6cac;
+  --accent-rgb: 43,108,172;
+}
+
+/* Deep-purple (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}
+

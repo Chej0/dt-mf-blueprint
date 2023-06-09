@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; }
+* :not(mat-icon) {
+  font-family: 'Poppins', sans-serif !important;
+  --mdc-list-list-item-label-text-font: font-family: 'Poppins', sans-serif !important;
+  --mdc-typography-subtitle2-font-family: font-family: 'Poppins', sans-serif !important;
+  --mdc-typography-font-family: font-family: 'Poppins', sans-serif !important;
+  --mdc-typography-button-letter-spacing: 0px;
+  .mat-typography h2, .mat-typography h1, .mat-typography h3 {margin: 0;}
+}
+.fancy-title {font-family: 'Poppins', sans-serif;  --mdc-list-list-item-label-text-font: font-family: 'Poppins', sans-serif; }
+
+
+.text-muted { color: #9f9f9f }
+
+@import 'assets/styles/app.scss';
