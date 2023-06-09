@@ -2,18 +2,17 @@ const { shareAll, withModuleFederationPlugin } = require('@angular-architects/mo
 
 const moduleFederationConfig = withModuleFederationPlugin({
 
-  // remotes: {
-  //   "mfe1": "http://localhost:3000/remoteEntry.js",    
-  // },
+  name: 'dt-angular',
 
-  remotes: {
-    mfAngular: "http://localhost:4201/remoteEntry.js",
+  exposes: {
+    './AngularModule': './src/app/angular/angular.module.ts',
   },
+
   shared: {
     ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
   },
 
 });
 
-moduleFederationConfig.output.publicPath = 'http://localhost:4200/';
+moduleFederationConfig.output.publicPath = 'http://localhost:4201/';
 module.exports = moduleFederationConfig;
