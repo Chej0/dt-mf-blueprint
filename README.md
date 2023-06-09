@@ -5,6 +5,48 @@ In this repo you will see te pretty basic structure of the new platform using Mo
 
 
 
+# Ejecutar el repositorio
+Debido a que este es un prototipo se se utilizaron aplicaciones parcialmente creadas y configuradas según este tutorial.
+https://www.angulararchitects.io/aktuelles/multi-framework-and-version-micro-frontends-with-module-federation-your-4-steps-guide/
+Para ejecutar la aplicación completa siga los siguientes pasos:
+
+## Ejecutar el módulo de angular
+Se requiere ejecutar en node 18, es importante tener nodejs en esta versión para poder ejecutarlo
+```console
+    cd dt-angular
+    npm i
+    ng serve
+```
+
+## Ejecutar el módulo de React
+Se requiere tener instalado la versión 14.19.3 de Node JS, puede usar Node Version Manager para gestionar distintas versiones de node al mismo tiempo
+https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+
+```console
+    cd dt-react-dl
+    nvm use 14.19.3
+    npm i
+    npm start
+```
+## Ejecutar el módulo de Vue
+Se requiere tener instalado la versión 14.19.3 de Node JS, puede usar Node Version Manager para gestionar distintas versiones de node al mismo tiempo
+https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+
+```console
+    cd dt-vue-dl
+    nvm use 14.19.3
+    npm i
+    npm start
+```
+
+## Ejecutar el shell
+Se requiere ejecutar en node 18, es importante tener nodejs en esta versión para poder ejecutarlo
+```console
+    cd dt-mf-shell
+    npm i
+    ng serve -o
+```
+ir a `http://localhost:4200/` para ver los cambios.
 
 
 
@@ -66,8 +108,3 @@ In this repo you will see te pretty basic structure of the new platform using Mo
 
 
 
-## Crear nuevo módulo en REACT
-1. En la misma carpeta raiz ejecuta el siquiente comando: 
-```console
-    ng new dt-angular --style=scss --routing=true
-```
